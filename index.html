@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Prometheus: A Multi-Agent Framework for Intelligent Codebase-Level Operations">
+  <meta name="description" content="Prometheus: Constructing a Unified Knowledge Graph from the Codebase for Issue Resolution">
   <meta name="keywords" content="multi-agent, automatic program repair, code reasoning, state machine, LLM">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Prometheus: A Multi-Agent Framework for Intelligent Codebase-Level Operations</title>
+  <title>Prometheus: Constructing a Unified Knowledge Graph from the Codebase for Issue Resolution</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="./static/css/bulma.min.css">
@@ -22,7 +22,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Prometheus: A Multi-Agent Framework for Intelligent Codebase-Level Operations</h1>
+          <h1 class="title is-1 publication-title">Prometheus: Constructing a Unified Knowledge Graph from the Codebase for Issue Resolution</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://scholar.google.se/citations?user=aTuF1c4AAAAJ&hl=sv">
@@ -76,10 +76,16 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            <b>Prometheus</b> is a multi-agent framework built on FastAPI for intelligent operations over codebases. It supports tasks such as code review, bug resolution, and pull request evaluation. By modeling collaboration among agents as a state machine, Prometheus enables compositional reasoning and robust task workflows.
+            We present <b>Prometheus</b>, a system that transforms an entire code repository into a unified knowledge graph to support software engineering tasks such as bug fixing, issue resolution, and agent-based development.
           </p>
           <p>
-            The framework integrates LLMs, retrieval-augmented generation, and testing backends to support both open-domain queries and structured agent pipelines. Prometheus is benchmarked on SWE-bench-lite, demonstrating competitive performance in program repair.
+            Large Language Models (LLMs) often struggle with limited context windows and lack structured understanding of large codebases. Prometheus addresses this by encoding the repository—including files, abstract syntax trees, and natural language text—into an interconnected graph of typed nodes and edges, persisted in Neo4j for scalable storage, traversal, and reasoning.
+          </p>
+          <p>
+            Prometheus enables a multi-agent architecture where specialized agents collaborate to reproduce issues, infer repair intents, generate patches, and validate fixes. For instance, one agent automatically configures builds to reproduce bugs, while others query the graph for relevant context or validate generated patches through testing.
+          </p>
+          <p>
+            Our key contribution is a reusable and extensible infrastructure for agentic workflows. Software tasks such as GitHub issue resolution are modeled as subgraphs, empowering agents to operate within the full structure of real-world repositories. Evaluated on SWE-bench Lite, Prometheus achieves a 25.12% resolution rate, demonstrating its effectiveness in autonomous software maintenance.
           </p>
         </div>
       </div>
