@@ -109,6 +109,93 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Try Prometheus Services</h2>
+        <div class="content has-text-justified">
+          <p>We provide two RESTful endpoints to support repository analysis and issue resolution:</p>
+
+          <div class="box has-text-left">
+            <h4 class="title is-5">📥 Upload Repository</h4>
+            <p>
+              <strong>GET</strong> <code>/repository/github_commit/</code><br>
+              Upload a repository from GitHub by providing the organization, repo name, and commit hash.
+            </p>
+            <p>
+              <a class="button is-link is-small" href="https://apifox.com/apidoc/shared/a1d9781c-ac15-4d46-8ecd-13caa82a87ab/upload-repository-309084884e0" target="_blank">
+                View on Apifox
+              </a>
+            </p>
+          </div>
+
+          <div class="box has-text-left">
+            <h4 class="title is-5">🛠️ Answer Issue</h4>
+            <p>
+              <strong>POST</strong> <code>/answer/</code><br>
+              Automatically generate a patch to resolve a GitHub issue, based on issue description and context.
+            </p>
+            <p>
+              <a class="button is-link is-small" href="https://apifox.com/apidoc/shared/a1d9781c-ac15-4d46-8ecd-13caa82a87ab/answer-issue-315665478e0" target="_blank">
+                View on Apifox
+              </a>
+            </p>
+          </div>
+
+          <p class="has-text-centered">
+            You can test these APIs directly on <a href="https://app.apifox.com/" target="_blank">Apifox</a>, or integrate them into your own systems.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">How to Use Prometheus APIs</h2>
+        <div class="content has-text-left">
+          <ol>
+            <li>
+              <strong>Step 1: Upload a Repository</strong><br>
+              Use the <code>/repository/github_commit/</code> endpoint to register a GitHub repository into the Prometheus system. This allows Prometheus to analyze the codebase and construct a knowledge graph.
+              <ul>
+                <li>
+                  <a class="button is-link is-small mt-2" href="https://apifox.com/apidoc/shared/a1d9781c-ac15-4d46-8ecd-13caa82a87ab/upload-repository-309084884e0" target="_blank">
+                    Full Upload API Docs
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <br>
+            <li>
+              <strong>Step 2: Answer a GitHub Issue</strong><br>
+              Once the repository is uploaded and parsed, use the <code>/answer/</code> endpoint to solve a specific issue by providing its details. The system will generate a patch to resolve the issue.
+              <ul>
+                <li>
+                  <a class="button is-link is-small mt-2" href="https://apifox.com/apidoc/shared/a1d9781c-ac15-4d46-8ecd-13caa82a87ab/answer-issue-315665478e0" target="_blank">
+                    Full Answer API Docs
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ol>
+
+          <hr>
+
+          <p class="has-text-centered">
+            For real-time testing, you can explore and try both APIs via <a href="https://app.apifox.com/" target="_blank">Apifox</a>.<br>
+            For production use, please ensure the repository is uploaded before attempting to resolve issues.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
